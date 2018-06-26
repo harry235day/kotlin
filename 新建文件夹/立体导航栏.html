@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>立体导航栏</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+    }
+
+    .container {
+        height: 50px;
+        margin: 110px 400px;
+    }
+
+    ul {
+        display: inline-block;
+        height: 100%;
+        position: relative;
+    }
+
+    ul::before, ul::after {
+        content: "";
+        width: 20px;
+        height: 50px;
+        background-color: pink;
+        position: absolute;
+        left: -20px;
+        top: 0px;
+    }
+    ul::after{
+        left: auto;
+        right: -20px;
+    }
+    li {
+        height: 50px;
+        text-align: center;
+        float: left;
+        background-color: #fff;
+        cursor: pointer;
+
+    }
+
+    span {
+        float: left;
+        display: inline-block;
+    }
+
+    .left, .right {
+        width: 20px;
+        height: 100%;
+        background-color: #ccc;
+    }
+
+    .left {
+        transform-origin: left;
+    }
+
+    .right {
+        transform-origin: right;
+    }
+
+    li:hover .left {
+        transform: skew(0deg, -30deg);
+    }
+
+    li:hover .right {
+        transform: skew(0deg, 30deg);
+    }
+
+    li:hover .center {
+        transform: translateY(-11px);
+    }
+
+    .center {
+        width: 100px;
+        line-height: 50px;
+
+        background-color: #ccc;
+    }
+</style>
+<body>
+<div class="container">
+
+    <ul>
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+
+        <li>
+            <span class="left"></span>
+            <span class="center">导航栏</span>
+            <span class="right"></span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
